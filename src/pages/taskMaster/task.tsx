@@ -22,7 +22,7 @@ export function TaskMaster() {
 
   const [listaTarefas, setListaTarefas] = useState<TypeForm[]>([]);
 
-  // 🔥 Carregar do localStorage
+  
   useEffect(() => {
     const dadosSalvos = localStorage.getItem("tarefas");
     if (dadosSalvos) {
@@ -30,7 +30,7 @@ export function TaskMaster() {
     }
   }, []);
 
-  // 🔥 Salvar sempre que mudar
+ 
   useEffect(() => {
     localStorage.setItem("tarefas", JSON.stringify(listaTarefas));
   }, [listaTarefas]);
